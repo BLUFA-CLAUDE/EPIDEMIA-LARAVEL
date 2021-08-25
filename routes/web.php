@@ -12,12 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/pays/add', 'PaysController@add')->name('addpays');
 Route::get('/pays/getById/{id}', 'PaysController@getById')->name('getpays');
